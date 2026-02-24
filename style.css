@@ -1,1 +1,119 @@
-/* Add styles here */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #1a237e;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #3f51b5;
+}
+
+.numbers-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* 7개의 다른 색상 볼 */
+.number:nth-child(7n+1) { background-color: #f44336; } /* 빨강 */
+.number:nth-child(7n+2) { background-color: #ff9800; } /* 주황 */
+.number:nth-child(7n+3) { background-color: #ffeb3b; color: #333; } /* 노랑 */
+.number:nth-child(7n+4) { background-color: #4caf50; } /* 초록 */
+.number:nth-child(7n+5) { background-color: #2196f3; } /* 파랑 */
+.number:nth-child(7n+6) { background-color: #3f51b5; } /* 남색 */
+.number:nth-child(7n)   { background-color: #9c27b0; } /* 보라 */
+
+
+#generate-btn {
+  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(254, 107, 139, 0.4);
+}
+
+#generate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(254, 107, 139, 0.6);
+}
+
+.history-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-list li {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border-left: 5px solid #6e8efb;
+}
+
+/* 스크롤바 디자인 (선택사항) */
+.history-list::-webkit-scrollbar {
+  width: 8px;
+}
+.history-list::-webkit-scrollbar-thumb {
+  background: #a777e3;
+  border-radius: 4px;
+}
+.history-list::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
