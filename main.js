@@ -22,10 +22,15 @@ const generateNumbers = () => {
     numbersContainer.appendChild(numberEl);
   });
 
-  // 추첨 내역에 추가
+  // 추첨 내역에 추가 (맨 위에 추가)
   const historyItem = document.createElement('li');
   historyItem.textContent = sortedNumbers.join(', ');
-  historyList.appendChild(historyItem);
+  historyList.prepend(historyItem);
+
+  // 5개 초과 시 가장 오래된 내역 삭제
+  while (historyList.children.length > 5) {
+    historyList.removeChild(historyList.lastChild);
+  }
 };
 
 generateBtn.addEventListener('click', generateNumbers);
