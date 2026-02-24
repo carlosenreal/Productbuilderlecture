@@ -1,0 +1,6 @@
+Plaintext
+
+node_modules/
+.env
+dist/
+.firebase/
