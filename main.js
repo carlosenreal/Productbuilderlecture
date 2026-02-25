@@ -3,13 +3,24 @@ const recommendBtn = document.getElementById('recommend-btn');
 const menuHistory = document.getElementById('menu-history');
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
+const htmlLang = document.documentElement.lang;
 
-const menuList = [
-  '김치찌개', '된장찌개', '제육볶음', '돈까스', '초밥', 
-  '치킨', '피자', '삼겹살', '파스타', '떡볶이',
-  '비빔밥', '순대국', '짜장면', '짬뽕', '탕수육',
-  '스테이크', '연어덮밥', '냉면', '부대찌개', '마라탕'
-];
+const menus = {
+  ko: [
+    '김치찌개', '된장찌개', '제육볶음', '돈까스', '초밥', 
+    '치킨', '피자', '삼겹살', '파스타', '떡볶이',
+    '비빔밥', '순대국', '짜장면', '짬뽕', '탕수육',
+    '스테이크', '연어덮밥', '냉면', '부대찌개', '마라탕'
+  ],
+  en: [
+    'Kimchi Stew', 'Soybean Paste Stew', 'Spicy Pork', 'Pork Cutlet', 'Sushi',
+    'Fried Chicken', 'Pizza', 'Grilled Pork Belly', 'Pasta', 'Tteokbokki',
+    'Bibimbap', 'Soondae Soup', 'Jajangmyeon', 'Jjamppong', 'Sweet and Sour Pork',
+    'Steak', 'Salmon Donburi', 'Cold Noodles', 'Army Stew', 'Malatang'
+  ]
+};
+
+const currentMenus = menus[htmlLang] || menus.ko;
 
 // 테마 초기화
 const currentTheme = localStorage.getItem('theme');
@@ -32,8 +43,8 @@ themeToggle.addEventListener('click', () => {
 
 const recommendMenu = () => {
   // 랜덤 메뉴 선택
-  const randomIndex = Math.floor(Math.random() * menuList.length);
-  const selectedMenu = menuList[randomIndex];
+  const randomIndex = Math.floor(Math.random() * currentMenus.length);
+  const selectedMenu = currentMenus[randomIndex];
 
   // 화면에 표시
   menuDisplay.innerHTML = `<div class="recommended-menu">${selectedMenu}</div>`;
