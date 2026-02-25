@@ -3,4 +3,4 @@ Plaintext
 node_modules/
 .env
 dist/
-.firebase/
+.firebase/firebase-debug.log

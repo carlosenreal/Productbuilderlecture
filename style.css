@@ -1,40 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
+:root {
+  --bg-gradient: linear-gradient(135deg, #6e8efb, #a777e3);
+  --container-bg: rgba(255, 255, 255, 0.9);
+  --text-color: #333;
+  --h1-color: #1a237e;
+  --h2-color: #3f51b5;
+  --li-bg: rgba(255, 255, 255, 0.7);
+  --li-border: #6e8efb;
+  --btn-bg: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+  --btn-shadow: rgba(254, 107, 139, 0.4);
+  --border-color: rgba(255, 255, 255, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode {
+  --bg-gradient: linear-gradient(135deg, #121212, #1f1f2e);
+  --container-bg: rgba(30, 30, 47, 0.95);
+  --text-color: #e0e0e0;
+  --h1-color: #9a8cff;
+  --h2-color: #b197fc;
+  --li-bg: rgba(45, 45, 68, 0.8);
+  --li-border: #9a8cff;
+  --btn-bg: linear-gradient(45deg, #7b1fa2, #4a148c);
+  --btn-shadow: rgba(123, 31, 162, 0.4);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
 body {
   font-family: 'Nanum Gothic', sans-serif;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background: var(--bg-gradient);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  color: #333;
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--container-bg);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px var(--shadow-color);
   text-align: center;
   width: 90%;
   max-width: 500px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+}
+
+/* 테마 토글 버튼 스타일 */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 h1 {
   margin-bottom: 1rem;
   font-weight: 800;
   font-size: 2.5rem;
-  color: #1a237e;
+  color: var(--h1-color);
+  transition: color 0.5s ease;
 }
 
 h2 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    color: #3f51b5;
+    color: var(--h2-color);
+    transition: color 0.5s ease;
 }
 
 .numbers-container {

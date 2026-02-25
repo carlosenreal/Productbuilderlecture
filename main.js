@@ -1,6 +1,27 @@
 const numbersContainer = document.getElementById('numbers');
 const generateBtn = document.getElementById('generate-btn');
 const historyList = document.getElementById('history');
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// 테마 초기화
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+  body.classList.add('dark-mode');
+  themeToggle.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+    themeToggle.textContent = '☀️';
+  } else {
+    localStorage.setItem('theme', 'light');
+    themeToggle.textContent = '🌙';
+  }
+});
 
 const generateNumbers = () => {
   // 기존 번호 삭제
