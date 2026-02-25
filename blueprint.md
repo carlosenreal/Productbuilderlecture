@@ -1,34 +1,36 @@
-# Blueprint: Lotto Number Generator with Theme Support
+# Blueprint: Dinner Menu Recommendation Site
 
 ## Project Overview
-A simple, modern Lotto Number Generator web application built with HTML, CSS, and JavaScript. It allows users to generate 6 random numbers between 1 and 45 and keeps track of recent draw history.
+A modern web application that helps users decide what to eat for dinner. It provides random menu suggestions from various cuisines and keeps track of recently recommended dishes.
 
 ## Features
-- **Lotto Number Generation:** Generates 6 unique random numbers.
-- **Draw History:** Displays the last 5 sets of generated numbers.
-- **Modern UI:** Responsive design with vibrant colors and smooth transitions.
-- **Theme Support:** Switch between Light (White) and Dark modes.
+- **Menu Recommendation:** Randomly selects a delicious dinner menu from a curated list.
+- **Recommendation History:** Displays the last few recommended menus.
+- **Modern UI:** Responsive design with food-themed aesthetics and smooth transitions.
+- **Theme Support:** Switch between Light (White) and Dark modes (persisted in localStorage).
 
 ## Technical Details
-- **Frontend:** Vanilla HTML5, CSS3 (Modern Baseline features), and ES6+ JavaScript.
-- **Styling:** CSS variables for easy theming, Container Queries, and Flexbox for layout.
-- **Storage:** `localStorage` to persist the user's theme preference.
+- **Frontend:** Vanilla HTML5, CSS3, and ES6+ JavaScript.
+- **Styling:** CSS variables for theming, Flexbox for layout.
+- **Logic:** Array-based random selection for menus.
+- **Storage:** `localStorage` for theme preference.
 
-## Current Plan: Adding Dark/White Mode
-1.  **CSS Refactoring:**
-    - Introduce CSS variables for colors (background, container, text, button).
-    - Define a `.dark-mode` class with overridden variable values.
-2.  **HTML Update:**
-    - Add a theme toggle button to `index.html`.
-3.  **JavaScript Implementation:**
-    - Logic to toggle `.dark-mode` on the `body`.
-    - Logic to save/load theme preference from `localStorage`.
+## Current Plan: Transition to Dinner Menu Site
+1.  **UI Content Update:**
+    *   Change titles from "로또 번호 추첨기" to "오늘의 저녁 메뉴 추천".
+    *   Change button text from "번호 생성" to "메뉴 추천받기".
+2.  **Logic Update:**
+    *   Replace lotto number generation with a dinner menu list.
+    *   Implement random menu selection logic.
+3.  **Styling Adjustments:**
+    *   Keep the dark/light mode support.
+    *   Ensure the display container fits menu text instead of small circles.
 4.  **Deployment:**
-    - Stage and commit changes to the Git repository.
+    *   Commit and push changes to GitHub.
 
 ## Steps
-- [x] Update `style.css` with CSS variables and dark mode styles.
-- [x] Update `index.html` with the theme toggle button.
-- [x] Update `main.js` with theme switching logic.
-- [x] Verify functionality and styling.
-- [x] Commit changes to Git.
+- [x] Update `index.html` with new titles and labels.
+- [x] Update `style.css` to accommodate menu text display.
+- [x] Update `main.js` with menu list and recommendation logic.
+- [x] Verify functionality.
+- [x] Commit and push to GitHub.

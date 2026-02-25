@@ -1,8 +1,15 @@
-const numbersContainer = document.getElementById('numbers');
-const generateBtn = document.getElementById('generate-btn');
-const historyList = document.getElementById('history');
+const menuDisplay = document.getElementById('menu-display');
+const recommendBtn = document.getElementById('recommend-btn');
+const menuHistory = document.getElementById('menu-history');
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
+
+const menuList = [
+  '김치찌개', '된장찌개', '제육볶음', '돈까스', '초밥', 
+  '치킨', '피자', '삼겹살', '파스타', '떡볶이',
+  '비빔밥', '순대국', '짜장면', '짬뽕', '탕수육',
+  '스테이크', '연어덮밥', '냉면', '부대찌개', '마라탕'
+];
 
 // 테마 초기화
 const currentTheme = localStorage.getItem('theme');
@@ -23,35 +30,23 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
-const generateNumbers = () => {
-  // 기존 번호 삭제
-  numbersContainer.innerHTML = '';
+const recommendMenu = () => {
+  // 랜덤 메뉴 선택
+  const randomIndex = Math.floor(Math.random() * menuList.length);
+  const selectedMenu = menuList[randomIndex];
 
-  // 1~45 사이의 숫자 6개 생성
-  const numbers = new Set();
-  while (numbers.size < 6) {
-    numbers.add(Math.floor(Math.random() * 45) + 1);
-  }
-
-  const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
-
-  // 화면에 번호 표시
-  sortedNumbers.forEach(number => {
-    const numberEl = document.createElement('div');
-    numberEl.classList.add('number');
-    numberEl.textContent = number;
-    numbersContainer.appendChild(numberEl);
-  });
+  // 화면에 표시
+  menuDisplay.innerHTML = `<div class="recommended-menu">${selectedMenu}</div>`;
 
   // 추첨 내역에 추가 (맨 위에 추가)
   const historyItem = document.createElement('li');
-  historyItem.textContent = sortedNumbers.join(', ');
-  historyList.prepend(historyItem);
+  historyItem.textContent = selectedMenu;
+  menuHistory.prepend(historyItem);
 
   // 5개 초과 시 가장 오래된 내역 삭제
-  while (historyList.children.length > 5) {
-    historyList.removeChild(historyList.lastChild);
+  while (menuHistory.children.length > 5) {
+    menuHistory.removeChild(menuHistory.lastChild);
   }
 };
 
-generateBtn.addEventListener('click', generateNumbers);
+recommendBtn.addEventListener('click', recommendMenu);

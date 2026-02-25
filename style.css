@@ -95,54 +95,53 @@ h2 {
     transition: color 0.5s ease;
 }
 
-.numbers-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-}
-
-.number {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.menu-container {
+  margin: 2.5rem 0;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
 }
 
-/* 7개의 다른 색상 볼 */
-.number:nth-child(7n+1) { background-color: #f44336; } /* 빨강 */
-.number:nth-child(7n+2) { background-color: #ff9800; } /* 주황 */
-.number:nth-child(7n+3) { background-color: #ffeb3b; color: #333; } /* 노랑 */
-.number:nth-child(7n+4) { background-color: #4caf50; } /* 초록 */
-.number:nth-child(7n+5) { background-color: #2196f3; } /* 파랑 */
-.number:nth-child(7n+6) { background-color: #3f51b5; } /* 남색 */
-.number:nth-child(7n)   { background-color: #9c27b0; } /* 보라 */
+.recommended-menu {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--h1-color);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  background-color: var(--li-bg);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
+.placeholder-text {
+  color: var(--text-color);
+  opacity: 0.6;
+  font-style: italic;
+}
 
-#generate-btn {
-  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#recommend-btn {
+  background: var(--btn-bg);
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(254, 107, 139, 0.4);
+  box-shadow: 0 4px 15px var(--btn-shadow);
+  width: 100%;
 }
 
-#generate-btn:hover {
+#recommend-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(254, 107, 139, 0.6);
+  box-shadow: 0 7px 20px var(--btn-shadow);
 }
 
 .history-list {
