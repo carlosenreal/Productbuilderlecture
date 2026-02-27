@@ -11,6 +11,7 @@ A modern web application that helps users decide what to eat for dinner. It prov
 - **Multi-language:** Supports Korean (`index.html`) and English (`en.html`).
 - **Partnership Inquiry:** A simple contact form powered by Formspree for business inquiries.
 - **Community Interaction:** Integrated Disqus comment section for user feedback and discussion.
+- **Monetization:** Google AdSense integration for ad revenue.
 
 ## Technical Details
 - **Frontend:** Vanilla HTML5, CSS3, and ES6+ JavaScript.
@@ -20,16 +21,17 @@ A modern web application that helps users decide what to eat for dinner. It prov
 - **Integration:** 
     - Formspree (`https://formspree.io/f/mdalyjaq`) for form handling.
     - Disqus (`productbuilderlecture.disqus.com`) for comments.
+    - Google AdSense (`ca-pub-2082859513043918`) for monetization.
 
-## Current Plan: Add Disqus Comments
+## Current Plan: Add Google AdSense
 1.  **HTML Update:**
-    *   Add Disqus thread and script to `index.html`.
-    *   Add Disqus thread and script to `en.html`.
-2.  **Deployment:**
-    *   Commit and push changes to GitHub.
+    *   Add AdSense meta tag and script tag to `en.html` (already present in `index.html`).
+2.  **Verification:**
+    *   Ensure `ads.txt` is correctly configured.
 
 ## Steps
 - [x] Add Disqus section to `index.html`.
 - [x] Add Disqus section to `en.html`.
-- [x] Verify Disqus integration.
+- [x] Add AdSense tags to `en.html`.
+- [x] Verify `ads.txt` content.
 - [x] Commit and push to GitHub.
