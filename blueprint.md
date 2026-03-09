@@ -23,23 +23,19 @@ A modern web application that helps users decide what to eat for dinner. It prov
     - Formspree (`https://formspree.io/f/mdalyjaq`) for form handling.
     - Disqus (`productbuilderlecture.disqus.com`) for comments.
     - Google AdSense (`ca-pub-2082859513043918`) for monetization.
+- **Deployment:** Firebase Hosting (`productbuilderlecture.web.app`).
 
-## Current Plan: AdSense Optimization & High Quality Content
-1.  **Content Expansion:**
-    *   Update `main.js` with rich menu metadata (descriptions, tips).
-    *   Modify UI to display this metadata.
-2.  **Mandatory Pages:**
-    *   Create `privacy.html` and `privacy_en.html`.
-3.  **UI/UX Improvement:**
-    *   Add footer with navigation links.
-    *   Enhance SEO with meta descriptions.
+## Current Plan: Project Deployment (Handoff)
+1.  **Deployment:**
+    *   The user will manually deploy the project using the Firebase CLI.
 
 ## Steps
 - [x] Add Disqus section to `index.html`.
 - [x] Add Disqus section to `en.html`.
 - [x] Add AdSense tags to `en.html`.
 - [x] Verify `ads.txt` content.
-- [ ] Expand menu content with metadata (descriptions/tips).
-- [ ] Create Privacy Policy pages.
-- [ ] Add footer and navigation links.
-- [ ] Final verification and commit.
+- [x] Expand menu content with metadata (descriptions/tips).
+- [x] Create Privacy Policy pages.
+- [x] Add footer and navigation links.
+- [x] Final verification and commit.
+- [ ] Deploy to Firebase Hosting (`productbuilderlecture`). (Pending manual user action)
