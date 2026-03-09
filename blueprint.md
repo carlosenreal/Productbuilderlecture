@@ -12,30 +12,10 @@ A modern web application that helps users decide what to eat for dinner. It prov
 - **Partnership Inquiry:** A simple contact form powered by Formspree for business inquiries.
 - **Community Interaction:** Integrated Disqus comment section for user feedback and discussion.
 - **Monetization:** Google AdSense integration for ad revenue.
-- **AdSense Optimization:** Includes mandatory pages (Privacy Policy) and rich textual content.
 
 ## Technical Details
 - **Frontend:** Vanilla HTML5, CSS3, and ES6+ JavaScript.
-- **Styling:** CSS variables for theming, Flexbox for layout.
-- **Logic:** Object-based random selection for menus with metadata.
-- **Storage:** `localStorage` for theme preference.
-- **Integration:** 
-    - Formspree (`https://formspree.io/f/mdalyjaq`) for form handling.
-    - Disqus (`productbuilderlecture.disqus.com`) for comments.
-    - Google AdSense (`ca-pub-2082859513043918`) for monetization.
-- **Deployment:** Firebase Hosting (`productbuilderlecture.web.app`).
-
-## Current Plan: Project Deployment (Handoff)
-1.  **Deployment:**
-    *   The user will manually deploy the project using the Firebase CLI.
+- **Deployment:** GitHub → Cloudflare Pages (자동 배포)
 
 ## Steps
-- [x] Add Disqus section to `index.html`.
-- [x] Add Disqus section to `en.html`.
-- [x] Add AdSense tags to `en.html`.
-- [x] Verify `ads.txt` content.
-- [x] Expand menu content with metadata (descriptions/tips).
-- [x] Create Privacy Policy pages.
-- [x] Add footer and navigation links.
-- [x] Final verification and commit.
-- [ ] Deploy to Firebase Hosting (`productbuilderlecture`). (Pending manual user action)
+- [x] All features complete and deployed via Cloudflare Pages.
