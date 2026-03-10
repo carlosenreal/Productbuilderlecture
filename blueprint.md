@@ -12,6 +12,7 @@ A modern web application that helps users decide what to eat for dinner. It prov
 - **Partnership Inquiry:** A simple contact form powered by Formspree for business inquiries.
 - **Community Interaction:** Integrated Disqus comment section for user feedback and discussion.
 - **Monetization:** Google AdSense integration for ad revenue.
+- **Analytics & Behavior Tracking:** Microsoft Clarity and Google Analytics (G-6FDL2FNC5N) integration for user behavior analysis.
 
 ## Technical Details
 - **Frontend:** Vanilla HTML5, CSS3, and ES6+ JavaScript.
