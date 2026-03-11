@@ -4,7 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="오늘 저녁 뭐 먹지? 고민 해결! 영양 가득한 식단 추천과 유용한 식사 팁을 제공하는 저녁 메뉴 추천 사이트입니다.">
+  <meta name="keywords" content="저녁 메뉴, 저녁 추천, 오늘 뭐 먹지, 식단 추천, 메뉴 룰렛, 저녁 식사">
   <title>오늘 뭐 먹지? - 저녁 메뉴 추천!!</title>
+  
+  <!-- SEO: Canonical & hreflang -->
+  <link rel="canonical" href="https://productbuilderlecture.pages.dev/index.html">
+  <link rel="alternate" hreflang="ko" href="https://productbuilderlecture.pages.dev/index.html" />
+  <link rel="alternate" hreflang="en" href="https://productbuilderlecture.pages.dev/en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://productbuilderlecture.pages.dev/index.html" />
+
+  <!-- SEO: Open Graph (Facebook, Naver, Kakao) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://productbuilderlecture.pages.dev/index.html">
+  <meta property="og:title" content="오늘 뭐 먹지? - 저녁 메뉴 추천!!">
+  <meta property="og:description" content="오늘 저녁 뭐 먹지? 고민 해결! 영양 가득한 식단 추천과 유용한 식사 팁을 제공하는 저녁 메뉴 추천 사이트입니다.">
+  <meta property="og:image" content="https://productbuilderlecture.pages.dev/favicon.svg">
+  <meta property="og:site_name" content="오늘 뭐 먹지?">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://productbuilderlecture.pages.dev/index.html">
+  <meta name="twitter:title" content="오늘 뭐 먹지? - 저녁 메뉴 추천!!">
+  <meta name="twitter:description" content="오늘 저녁 뭐 먹지? 고민 해결! 영양 가득한 식단 추천과 유용한 식사 팁을 제공하는 저녁 메뉴 추천 사이트입니다.">
+  <meta name="twitter:image" content="https://productbuilderlecture.pages.dev/favicon.svg">
+
+  <!-- SEO: JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "오늘 뭐 먹지?",
+    "url": "https://productbuilderlecture.pages.dev/index.html",
+    "description": "오늘 저녁 뭐 먹지? 고민 해결! 영양 가득한 식단 추천과 유용한 식사 팁을 제공하는 저녁 메뉴 추천 사이트입니다.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Any"
+  }
+  </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link href='/style.css' rel='stylesheet'>
   <meta name="google-adsense-account" content="ca-pub-2082859513043918">
@@ -30,43 +66,55 @@
 </head>
 <body>
   <div class="container">
-    <div class="top-controls">
-      <div class="lang-switcher">
-        <a href="/index.html" class="active">KO</a> | <a href="/en.html">EN</a>
+    <header>
+      <div class="top-controls">
+        <div class="lang-switcher">
+          <a href="/index.html" class="active">KO</a> | <a href="/en.html">EN</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
       </div>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-    </div>
-    <h1>오늘의 저녁 추천!!</h1>
-    <div id="menu-display" class="menu-container">
-      <p class="placeholder-text">버튼을 눌러 메뉴를 추천받으세요!</p>
-    </div>
-    <button id="recommend-btn">메뉴 추천받기</button>
-    <h2>최근 추천 내역</h2>
-    <ul id="menu-history" class="history-list"></ul>
+      <h1>오늘의 저녁 추천!!</h1>
+    </header>
     
-    <div class="partnership-section">
-      <h3>제휴 문의</h3>
-      <form action="https://formspree.io/f/mdalyjaq" method="POST" class="contact-form">
-        <div class="form-group">
-          <input type="email" name="email" placeholder="이메일 주소" required>
+    <main>
+      <section aria-label="메뉴 추천 영역">
+        <div id="menu-display" class="menu-container">
+          <p class="placeholder-text">버튼을 눌러 메뉴를 추천받으세요!</p>
         </div>
-        <div class="form-group">
-          <textarea name="message" placeholder="문의 내용 (회사명, 협업 제안 등)" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">문의하기</button>
-      </form>
-    </div>
+        <button id="recommend-btn">메뉴 추천받기</button>
+      </section>
+      
+      <section aria-label="최근 추천 내역 영역">
+        <h2>최근 추천 내역</h2>
+        <ul id="menu-history" class="history-list"></ul>
+      </section>
+      
+      <section class="partnership-section" aria-label="제휴 문의 영역">
+        <h3>제휴 문의</h3>
+        <form action="https://formspree.io/f/mdalyjaq" method="POST" class="contact-form">
+          <div class="form-group">
+            <input type="email" name="email" placeholder="이메일 주소" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="문의 내용 (회사명, 협업 제안 등)" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">문의하기</button>
+        </form>
+      </section>
 
-    <div id="disqus_thread" style="margin-top: 3rem;"></div>
-    <script>
-        (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://productbuilderlecture.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <section aria-label="댓글 영역">
+        <div id="disqus_thread" style="margin-top: 3rem;"></div>
+        <script>
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://productbuilderlecture.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </section>
+    </main>
     
     <footer class="site-footer">
       <p>&copy; 2026 Dinner Recommender. <a href="/privacy.html">개인정보처리방침</a></p>

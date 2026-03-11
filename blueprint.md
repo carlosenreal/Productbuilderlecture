@@ -14,6 +14,7 @@ A modern web application that helps users decide what to eat for dinner. It prov
 - **Monetization:** Google AdSense integration for ad revenue.
 - **Analytics & Behavior Tracking:** Microsoft Clarity and Google Analytics (G-6FDL2FNC5N) integration for user behavior analysis.
 - **Brand Identity:** Added a custom-designed `favicon.svg` for a modern and professional site icon.
+- **SEO Optimization:** Comprehensive SEO application compliant with Google and Naver guidelines (Semantic HTML, Open Graph, Twitter Cards, JSON-LD, Sitemap, robots.txt).
 
 ## Technical Details
 - **Frontend:** Vanilla HTML5, CSS3, and ES6+ JavaScript.

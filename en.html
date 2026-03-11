@@ -4,7 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Decide what to eat for dinner! A dinner recommendation site providing nutritious meal ideas and useful eating tips.">
+  <meta name="keywords" content="dinner menu, dinner recommendation, what to eat, meal ideas, menu roulette, dinner">
   <title>What to eat? - Dinner Menu Recommendation</title>
+  
+  <!-- SEO: Canonical & hreflang -->
+  <link rel="canonical" href="https://productbuilderlecture.pages.dev/en.html">
+  <link rel="alternate" hreflang="ko" href="https://productbuilderlecture.pages.dev/index.html" />
+  <link rel="alternate" hreflang="en" href="https://productbuilderlecture.pages.dev/en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://productbuilderlecture.pages.dev/index.html" />
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://productbuilderlecture.pages.dev/en.html">
+  <meta property="og:title" content="What to eat? - Dinner Menu Recommendation">
+  <meta property="og:description" content="Decide what to eat for dinner! A dinner recommendation site providing nutritious meal ideas and useful eating tips.">
+  <meta property="og:image" content="https://productbuilderlecture.pages.dev/favicon.svg">
+  <meta property="og:site_name" content="Dinner Recommender">
+  <meta property="og:locale" content="en_US">
+
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://productbuilderlecture.pages.dev/en.html">
+  <meta name="twitter:title" content="What to eat? - Dinner Menu Recommendation">
+  <meta name="twitter:description" content="Decide what to eat for dinner! A dinner recommendation site providing nutritious meal ideas and useful eating tips.">
+  <meta name="twitter:image" content="https://productbuilderlecture.pages.dev/favicon.svg">
+
+  <!-- SEO: JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Dinner Recommender",
+    "url": "https://productbuilderlecture.pages.dev/en.html",
+    "description": "Decide what to eat for dinner! A dinner recommendation site providing nutritious meal ideas and useful eating tips.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Any"
+  }
+  </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link href='/style.css' rel='stylesheet'>
   <meta name="google-adsense-account" content="ca-pub-2082859513043918">
@@ -30,43 +66,55 @@
 </head>
 <body>
   <div class="container">
-    <div class="top-controls">
-      <div class="lang-switcher">
-        <a href="/index.html">KO</a> | <a href="/en.html" class="active">EN</a>
+    <header>
+      <div class="top-controls">
+        <div class="lang-switcher">
+          <a href="/index.html">KO</a> | <a href="/en.html" class="active">EN</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
       </div>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-    </div>
-    <h1>Dinner Recommender</h1>
-    <div id="menu-display" class="menu-container">
-      <p class="placeholder-text">Click the button to get a recommendation!</p>
-    </div>
-    <button id="recommend-btn">Recommend Me!</button>
-    <h2>Recent Recommendations</h2>
-    <ul id="menu-history" class="history-list"></ul>
-
-    <div class="partnership-section">
-      <h3>Partnership Inquiry</h3>
-      <form action="https://formspree.io/f/mdalyjaq" method="POST" class="contact-form">
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Email Address" required>
+      <h1>Dinner Recommender</h1>
+    </header>
+    
+    <main>
+      <section aria-label="Menu Recommendation Area">
+        <div id="menu-display" class="menu-container">
+          <p class="placeholder-text">Click the button to get a recommendation!</p>
         </div>
-        <div class="form-group">
-          <textarea name="message" placeholder="Message (Company, Proposals, etc.)" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Submit Inquiry</button>
-      </form>
-    </div>
+        <button id="recommend-btn">Recommend Me!</button>
+      </section>
 
-    <div id="disqus_thread" style="margin-top: 3rem;"></div>
-    <script>
-        (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://productbuilderlecture.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <section aria-label="Recent Recommendations Area">
+        <h2>Recent Recommendations</h2>
+        <ul id="menu-history" class="history-list"></ul>
+      </section>
+
+      <section class="partnership-section" aria-label="Partnership Inquiry Area">
+        <h3>Partnership Inquiry</h3>
+        <form action="https://formspree.io/f/mdalyjaq" method="POST" class="contact-form">
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Message (Company, Proposals, etc.)" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit Inquiry</button>
+        </form>
+      </section>
+
+      <section aria-label="Comments Area">
+        <div id="disqus_thread" style="margin-top: 3rem;"></div>
+        <script>
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://productbuilderlecture.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </section>
+    </main>
     
     <footer class="site-footer">
       <p>&copy; 2026 Dinner Recommender. <a href="/privacy_en.html">Privacy Policy</a></p>
