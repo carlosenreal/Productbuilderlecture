@@ -13,7 +13,7 @@ A modern web application that helps users decide what to eat for dinner. It prov
 - **Community Interaction:** Integrated Disqus comment section for user feedback and discussion.
 - **Monetization:** Google AdSense integration for ad revenue.
 - **Analytics & Behavior Tracking:** Microsoft Clarity and Google Analytics (G-6FDL2FNC5N) integration for user behavior analysis.
-- **Brand Identity:** Added `favicon.ico` for a professional site icon.
+- **Brand Identity:** Added a custom-designed `favicon.svg` for a modern and professional site icon.
 
 ## Technical Details
 - **Frontend:** Vanilla HTML5, CSS3, and ES6+ JavaScript.
