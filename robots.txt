@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://productbuilderlecture.pages.dev/sitemap.xml
+Sitemap: https://carlosenrealpaquito.shop/sitemap.xml
