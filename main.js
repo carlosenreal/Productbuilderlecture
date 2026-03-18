@@ -2,8 +2,11 @@ const menuDisplay = document.getElementById('menu-display');
 const recommendBtn = document.getElementById('recommend-btn');
 const menuHistory = document.getElementById('menu-history');
 const themeToggle = document.body.querySelector('#theme-toggle');
+const shareSection = document.querySelector('.share-section');
 const body = document.body;
 const htmlLang = document.documentElement.lang;
+
+let lastRecommendedMenu = '';
 
 const menus = {
   ko: [
@@ -63,6 +66,7 @@ const recommendMenu = () => {
     // 랜덤 메뉴 선택
     const randomIndex = Math.floor(Math.random() * currentMenus.length);
     const selected = currentMenus[randomIndex];
+    lastRecommendedMenu = selected.name;
 
     // 화면에 표시 (고품질 컨텐츠)
     menuDisplay.innerHTML = `
@@ -85,8 +89,90 @@ const recommendMenu = () => {
       menuHistory.removeChild(menuHistory.lastChild);
     }
     
+    // 공유 섹션 표시
+    if (shareSection) {
+      shareSection.classList.add('visible');
+    }
+
     recommendBtn.disabled = false;
   }, 600);
 };
 
 recommendBtn.addEventListener('click', recommendMenu);
+
+// Social Sharing Logic
+const getShareText = () => {
+  if (htmlLang === 'en') {
+    return `What should I eat for dinner? Problem solved! I got recommended "${lastRecommendedMenu}"! Check it out!`;
+  } else {
+    return `오늘 저녁 뭐 먹지? 고민 해결! 저는 "${lastRecommendedMenu}" 추천받았어요! 여러분도 확인해보세요!`;
+  }
+};
+
+const shareToFacebook = () => {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+};
+
+const shareToX = () => {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent(getShareText());
+  window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+};
+
+const shareToWhatsApp = () => {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent(getShareText());
+  window.open(`https://api.whatsapp.com/send?text=${text}%20${url}`, '_blank');
+};
+
+const shareToTelegram = () => {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent(getShareText());
+  window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
+};
+
+const copyLink = () => {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    const originalText = document.querySelector('.share-title').textContent;
+    document.querySelector('.share-title').textContent = htmlLang === 'en' ? 'Link Copied!' : '링크가 복사되었습니다!';
+    document.querySelector('.share-title').style.color = 'var(--secondary-color)';
+    
+    setTimeout(() => {
+      document.querySelector('.share-title').textContent = originalText;
+      document.querySelector('.share-title').style.color = '';
+    }, 2000);
+  });
+};
+
+// Web Share API support
+const handleNativeShare = () => {
+  if (navigator.share) {
+    navigator.share({
+      title: htmlLang === 'en' ? "What's for Dinner?" : "오늘 뭐 먹지?",
+      text: getShareText(),
+      url: window.location.href,
+    }).catch(console.error);
+    return true;
+  }
+  return false;
+};
+
+document.getElementById('share-facebook').addEventListener('click', () => {
+  if (!handleNativeShare()) shareToFacebook();
+});
+
+document.getElementById('share-x').addEventListener('click', () => {
+  if (!handleNativeShare()) shareToX();
+});
+
+document.getElementById('share-whatsapp').addEventListener('click', () => {
+  if (!handleNativeShare()) shareToWhatsApp();
+});
+
+document.getElementById('share-telegram').addEventListener('click', () => {
+  if (!handleNativeShare()) shareToTelegram();
+});
+
+document.getElementById('share-copy').addEventListener('click', copyLink);

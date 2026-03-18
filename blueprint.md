@@ -14,7 +14,13 @@ A modern web application that helps users decide what to eat for dinner. It prov
 - **Monetization:** Google AdSense integration for ad revenue.
 - **Analytics & Behavior Tracking:** Microsoft Clarity and Google Analytics (G-6FDL2FNC5N) integration for user behavior analysis.
 - **Brand Identity:** Added a custom-designed `favicon.svg` for a modern and professional site icon.
-- **SEO & GEO Optimization:** Comprehensive SEO application compliant with Google and Naver guidelines. Enhanced for AI search (GEO) with FAQ sections, conversational content, and structured JSON-LD.
+- [x] SEO & GEO Optimization: Comprehensive SEO application compliant with Google and Naver guidelines. Enhanced for AI search (GEO) with FAQ sections, conversational content, and structured JSON-LD.
+- [ ] Implement Social Media Sharing (Viral Features)
+    - [ ] Add sharing buttons for Facebook, X (Twitter), WhatsApp, and Telegram.
+    - [ ] Implement Web Share API for native mobile sharing.
+    - [ ] Add "Copy Link" functionality with user feedback.
+    - [ ] Dynamic sharing message including the recommended menu name.
+
 
 ## Technical Details
 - **Frontend:** Vanilla HTML5, CSS3, and ES6+ JavaScript.

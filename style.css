@@ -228,6 +228,59 @@ h2 {
   text-decoration: none;
 }
 
+/* Share Section */
+.share-section {
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 1px dashed var(--bg-color);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s, transform 0.5s;
+  pointer-events: none;
+}
+
+.share-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.share-title {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.share-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  color: white;
+}
+
+.share-btn:hover {
+  transform: scale(1.1);
+}
+
+.share-facebook { background-color: #1877f2; }
+.share-x { background-color: #000000; }
+.share-whatsapp { background-color: #25d366; }
+.share-telegram { background-color: #0088cc; }
+.share-copy { background-color: var(--secondary-color); }
+
 /* Policy Content */
 .policy-content {
   text-align: left;
