@@ -1,7 +1,7 @@
 # Blueprint: Dinner Menu Recommendation Site (Multi-language)
 
 ## Project Overview
-A modern web application that helps users decide what to eat for dinner. It provides random menu suggestions from various cuisines and keeps track of recently recommended dishes. Now supports both Korean and English, includes a partnership inquiry form, features a Disqus comment section, and is optimized for Google AdSense approval.
+A modern web application that helps users decide what to eat for dinner. It provides random menu suggestions from various cuisines and keeps track of recently recommended dishes. Now supports both Korean and English, includes a partnership inquiry form, features a Disqus comment section, and is optimized for Google AdSense approval and Generative Engine Optimization (GEO).
 
 ## Features
 - **Enhanced Menu Recommendation:** Provides not just a name, but descriptions, nutritional tips, and "why it's good" for each dish.
@@ -14,11 +14,18 @@ A modern web application that helps users decide what to eat for dinner. It prov
 - **Monetization:** Google AdSense integration for ad revenue.
 - **Analytics & Behavior Tracking:** Microsoft Clarity and Google Analytics (G-6FDL2FNC5N) integration for user behavior analysis.
 - **Brand Identity:** Added a custom-designed `favicon.svg` for a modern and professional site icon.
-- **SEO Optimization:** Comprehensive SEO application compliant with Google and Naver guidelines (Semantic HTML, Open Graph, Twitter Cards, JSON-LD, Sitemap, robots.txt).
+- **SEO & GEO Optimization:** Comprehensive SEO application compliant with Google and Naver guidelines. Enhanced for AI search (GEO) with FAQ sections, conversational content, and structured JSON-LD.
 
 ## Technical Details
 - **Frontend:** Vanilla HTML5, CSS3, and ES6+ JavaScript.
-- **Deployment:** GitHub → Cloudflare Pages (자동 배포)
+- **Deployment:** GitHub → Firebase Hosting (Main), Cloudflare Pages (Legacy)
 
 ## Steps
-- [x] All features complete and deployed via Cloudflare Pages.
+- [x] Initial features complete and deployed.
+- [x] Added Multi-language, Adsense, and Analytics.
+- [x] Added Favicon and SEO optimization.
+- [ ] Implement GEO (Generative Engine Optimization) based on Toss Payments Blog.
+    - [ ] Add FAQ section with conversational keywords.
+    - [ ] Update product/service descriptions to be context-aware (Who, When, Where).
+    - [ ] Strengthen JSON-LD for AI search engines.
+    - [ ] Add "2026 Latest" indicators for freshness.
